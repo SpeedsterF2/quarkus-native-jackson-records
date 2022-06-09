@@ -6,7 +6,7 @@ To replicate issue:
    ```
    mvn package -Pnative
    ```
-Uses image `quay.io/quarkus/ubi-quarkus-mandrel:22.1-java17` for building, see [application.properties](src/main/resources/application.properties)
+Uses image `quay.io/quarkus/ubi-quarkus-mandrel:21.3.2.0-Final-java17` for building, see [application.properties](src/main/resources/application.properties)
 
 NOTE: test pass when running under the JVM.
 
@@ -22,10 +22,10 @@ __  ____  __  _____   ___  __ ____  ______
  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
 --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
-2022-06-09 17:52:05,323 INFO  [io.quarkus] (main) jacksonrecords 0.0.1-SNAPSHOT native (powered by Quarkus 2.9.2.Final) started in 0.017s. 
-2022-06-09 17:52:05,325 INFO  [io.quarkus] (main) Profile prod activated. 
-2022-06-09 17:52:05,325 INFO  [io.quarkus] (main) Installed features: [cdi]
-2022-06-09 17:52:05,326 ERROR [io.qua.run.Application] (main) Failed to start application (with profile prod): com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Failed to access RecordComponents of type `io.acme.jacksonrecords.SomeRecord`
+2022-06-09 18:04:31,965 INFO  [io.quarkus] (main) jacksonrecords 0.0.1-SNAPSHOT native (powered by Quarkus 2.9.2.Final) started in 0.023s. 
+2022-06-09 18:04:31,967 INFO  [io.quarkus] (main) Profile prod activated. 
+2022-06-09 18:04:31,967 INFO  [io.quarkus] (main) Installed features: [cdi]
+2022-06-09 18:04:31,968 ERROR [io.qua.run.Application] (main) Failed to start application (with profile prod): com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Failed to access RecordComponents of type `io.acme.jacksonrecords.SomeRecord`
  at [Source: (String)"{
   "name": "John",
   "surname": "Smith"
@@ -47,6 +47,6 @@ __  ____  __  _____   ___  __ ____  ______
 	at io.quarkus.runtime.Quarkus.run(Quarkus.java:41)
 	at io.quarkus.runner.GeneratedMain.main(Unknown Source)
 
-2022-06-09 17:52:05,326 INFO  [io.quarkus] (main) jacksonrecords stopped in 0.000s
+2022-06-09 18:04:31,969 INFO  [io.quarkus] (main) jacksonrecords stopped in 0.000s
 
 ```
