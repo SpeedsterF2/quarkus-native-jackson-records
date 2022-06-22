@@ -7,6 +7,7 @@ To replicate issue:
    mvn package -Pnative
    ```
 Uses image `quay.io/quarkus/ubi-quarkus-mandrel:22.1-java17` for building, see [application.properties](src/main/resources/application.properties)
+(default is `quay.io/quarkus/ubi-quarkus-mandrel:22.0-java17`)
 
 NOTE: test pass when running under the JVM.
 
